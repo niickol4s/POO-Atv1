@@ -35,13 +35,18 @@ public class GerenciadorLivro {
         return 0;
     }
 
-    public void imprimirLista() {
-        for (Livro livro : livros) {
-            System.out.println("\nLista de Livros:\n");
-            System.out.println("Título: " + livro.getTitulo());
-            System.out.println("Autor: " + livro.getAutor());
-            System.out.println("Ano de Publicação: " + livro.getAno());
+    public void imprimirLista() {     
+        if (livros.isEmpty()) {
+            System.out.println("\nLista vazia.");
+        } else {
+            for (Livro livro : livros) {
+                System.out.println("\nLista de Livros:\n");
+                System.out.println("Título: " + livro.getTitulo());
+                System.out.println("Autor: " + livro.getAutor());
+                System.out.println("Ano de Publicação: " + livro.getAno());
+            }
         }
+        
     }
 
 }

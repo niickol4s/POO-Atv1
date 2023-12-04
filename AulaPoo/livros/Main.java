@@ -22,24 +22,24 @@ public class Main {
             System.out.println("3 - Buscar livro;");
             System.out.println("4 - Mostrar lista;");
             System.out.println("0 - Encerrar.");
-            System.out.println("\nOpção: ");
+            System.out.print("\nOpção: ");
             opcao = inputOpcao.nextInt();
 
             switch (opcao) {
                 case 1:
                     System.out.println("\nAdicionar livro\n");
-                    System.out.println("Livro:");
+                    System.out.print("Livro: ");
                     titulo = inputLivro.nextLine();
-                    System.out.println("Autor:");
+                    System.out.print("Autor: ");
                     autor = inputAutor.nextLine();
-                    System.out.println("Ano de Publicação:");
+                    System.out.print("Ano de Publicação: ");
                     ano = inputAno.nextInt();                    
                     gl.adicionar(titulo, autor, ano);
                     System.out.println("\nLivro adicionado na lista.");
                     break;
                 case 2:
                     System.out.println("\nRemover livro\n");
-                    System.out.println("Livro: ");
+                    System.out.print("Livro: ");
                     titulo = inputLivro.nextLine();
                     retorno = gl.remover(titulo);
                     if (retorno == 1) {
@@ -50,7 +50,7 @@ public class Main {
                     break;
                 case 3:
                     System.out.println("\nBuscar livro\n");
-                    System.out.println("Livro: ");
+                    System.out.print("Livro: ");
                     titulo = inputLivro.nextLine();
                     retorno = gl.exibir(titulo);
                     if (retorno == 1){
